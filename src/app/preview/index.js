@@ -3,7 +3,7 @@ import { AppContext } from 'context'
 
 import { Button, Input, Checkbox, Slider } from 'components/atoms'
 import { CheckboxGroup, ProductCard } from 'components/molecules'
-import { Comments, Feed } from 'components/organisms'
+import { Comments, Feed, Form } from 'components/organisms'
 import { Ecommerce, Blog } from 'components/templates'
 
 const Preview = () => {
@@ -24,6 +24,7 @@ const Preview = () => {
       {/* organisms */}
       {selectedComponent === 'comments' && <Comments />}
       {selectedComponent === 'feed' && <Feed />}
+      {selectedComponent === 'form' && <Form />}
 
       {/* templates */}
       {selectedComponent === 'ecommerce' && <Ecommerce />}
