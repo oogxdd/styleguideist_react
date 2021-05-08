@@ -1,5 +1,8 @@
 import { useContext } from 'react'
 import { AppContext } from 'context'
+import { CheckboxGroup } from '../molecules/checkbox-group.js'
+import { Button } from '../atoms/button.js'
+import { Input } from '../atoms/input.js'
 
 export const Form = () => {
   const { color, spacing, radius, style } = useContext(AppContext)
@@ -24,13 +27,7 @@ export const Form = () => {
                 <span className={`inline-flex items-center px-3 rounded-l-${radius} border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm`}>
                   workcation.com/
                 </span>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  autoComplete="username"
-                  className={`flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-${radius} sm:text-sm border-gray-300`}
-                />
+                <Input className={`rounded-r-${radius}`}/>
               </div>
             </div>
 
@@ -55,17 +52,12 @@ export const Form = () => {
                 Photo
               </label>
               <div className="mt-1 flex items-center">
-                <span className="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                <span className="h-12 w-12 rounded-full overflow-hidden bg-gray-100 mr-5">
                   <svg className="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </span>
-                <button
-                  type="button"
-                  className={`ml-5 bg-white py-2 px-3 border border-gray-300 rounded-${radius} shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
-                >
-                  Change
-                </button>
+                <Button name="Change"/>
               </div>
             </div>
 
@@ -117,13 +109,7 @@ export const Form = () => {
                 First name
               </label>
               <div className="mt-1">
-                <input
-                  type="text"
-                  name="first_name"
-                  id="first_name"
-                  autoComplete="given-name"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
 
@@ -132,13 +118,7 @@ export const Form = () => {
                 Last name
               </label>
               <div className="mt-1">
-                <input
-                  type="text"
-                  name="last_name"
-                  id="last_name"
-                  autoComplete="family-name"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
 
@@ -147,13 +127,7 @@ export const Form = () => {
                 Email address
               </label>
               <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
 
@@ -180,13 +154,7 @@ export const Form = () => {
                 Street address
               </label>
               <div className="mt-1">
-                <input
-                  type="text"
-                  name="street_address"
-                  id="street_address"
-                  autoComplete="street-address"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
 
@@ -195,12 +163,7 @@ export const Form = () => {
                 City
               </label>
               <div className="mt-1">
-                <input
-                  type="text"
-                  name="city"
-                  id="city"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
 
@@ -209,12 +172,7 @@ export const Form = () => {
                 State / Province
               </label>
               <div className="mt-1">
-                <input
-                  type="text"
-                  name="state"
-                  id="state"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
 
@@ -223,13 +181,7 @@ export const Form = () => {
                 ZIP / Postal
               </label>
               <div className="mt-1">
-                <input
-                  type="text"
-                  name="zip"
-                  id="zip"
-                  autoComplete="postal-code"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                />
+                <Input />
               </div>
             </div>
           </div>
@@ -243,59 +195,7 @@ export const Form = () => {
             </p>
           </div>
           <div className="mt-6">
-            <fieldset>
-              <legend className="text-base font-medium text-gray-900">By Email</legend>
-              <div className="mt-4 space-y-4">
-                <div className="relative flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="comments"
-                      name="comments"
-                      type="checkbox"
-                      className={`focus:ring-${color}-500 h-4 w-4 text-${color}-600 border-gray-300 rounded-${radius}`}
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label htmlFor="comments" className="font-medium text-gray-700">
-                      Comments
-                    </label>
-                    <p className="text-gray-500">Get notified when someones posts a comment on a posting.</p>
-                  </div>
-                </div>
-                <div className="relative flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="candidates"
-                      name="candidates"
-                      type="checkbox"
-                      className={`focus:ring-${color}-500 h-4 w-4 text-${color}-600 border-gray-300 rounded-${radius}`}
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label htmlFor="candidates" className="font-medium text-gray-700">
-                      Candidates
-                    </label>
-                    <p className="text-gray-500">Get notified when a candidate applies for a job.</p>
-                  </div>
-                </div>
-                <div className="relative flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="offers"
-                      name="offers"
-                      type="checkbox"
-                      className={`focus:ring-${color}-500 h-4 w-4 text-${color}-600 border-gray-300 rounded-${radius}`}
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label htmlFor="offers" className="font-medium text-gray-700">
-                      Offers
-                    </label>
-                    <p className="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
+            <CheckboxGroup />
             <fieldset className="mt-6">
               <div>
                 <legend className="text-base font-medium text-gray-900">Push Notifications</legend>
@@ -343,18 +243,8 @@ export const Form = () => {
 
       <div className="pt-5">
         <div className="flex justify-end">
-          <button
-            type="button"
-            className={`bg-white py-2 px-4 border border-gray-300 rounded-${radius} shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            className={`ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-${radius} text-white bg-${color}-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
-          >
-            Save
-          </button>
+          <Button name="Cancel" />
+          <Button name="Save" />
         </div>
       </div>
     </form>
