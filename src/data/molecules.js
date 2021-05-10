@@ -7,4 +7,8 @@ export const molecules = [
     label: 'Product card',
     value: 'product-card',
   },
+  {
+    label: 'Radio group',
+    value: 'radio-group',
+  },
 ]

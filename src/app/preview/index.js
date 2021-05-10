@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { AppContext } from 'context'
 
-import { Button, Input, Checkbox, Slider } from 'components/atoms'
-import { CheckboxGroup, ProductCard } from 'components/molecules'
+import { Button, Input, Checkbox, Slider, Textarea, Radio } from 'components/atoms'
+import { CheckboxGroup, ProductCard, RadioGroup } from 'components/molecules'
 import { Comments, Feed, Form } from 'components/organisms'
 import { Ecommerce, Blog } from 'components/templates'
 
@@ -16,10 +16,13 @@ const Preview = () => {
       {selectedComponent === 'input' && <Input />}
       {selectedComponent === 'checkbox' && <Checkbox />}
       {selectedComponent === 'slider' && <Slider />}
+      {selectedComponent === 'textarea' && <Textarea />}
+      {selectedComponent === 'radio' && <Radio />}
 
       {/* molecules */}
       {selectedComponent === 'checkbox-group' && <CheckboxGroup />}
       {selectedComponent === 'product-card' && <ProductCard />}
+      {selectedComponent === 'radio-group' && <RadioGroup />}
 
       {/* organisms */}
       {selectedComponent === 'comments' && <Comments />}

@@ -1,8 +1,10 @@
 import { useContext } from 'react'
 import { AppContext } from 'context'
 import { CheckboxGroup } from '../molecules/checkbox-group.js'
+import { RadioGroup } from '../molecules/radio-group.js'
 import { Button } from '../atoms/button.js'
 import { Input } from '../atoms/input.js'
+import {Textarea} from '../atoms/textarea.js'
 
 export const Form = () => {
   const { color, spacing, radius, style } = useContext(AppContext)
@@ -36,13 +38,7 @@ export const Form = () => {
                 About
               </label>
               <div className="mt-1">
-                <textarea
-                  id="about"
-                  name="about"
-                  rows={3}
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                  defaultValue={''}
-                />
+                <Textarea />
               </div>
               <p className="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
             </div>
@@ -196,47 +192,7 @@ export const Form = () => {
           </div>
           <div className="mt-6">
             <CheckboxGroup />
-            <fieldset className="mt-6">
-              <div>
-                <legend className="text-base font-medium text-gray-900">Push Notifications</legend>
-                <p className="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p>
-              </div>
-              <div className="mt-4 space-y-4">
-                <div className="flex items-center">
-                  <input
-                    id="push_everything"
-                    name="push_notifications"
-                    type="radio"
-                    className={`focus:ring-${color}-500 h-4 w-4 text-${color}-600 border-gray-300`}
-                  />
-                  <label htmlFor="push_everything" className="ml-3 block text-sm font-medium text-gray-700">
-                    Everything
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="push_email"
-                    name="push_notifications"
-                    type="radio"
-                    className={`focus:ring-${color}-500 h-4 w-4 text-${color}-600 border-gray-300`}
-                  />
-                  <label htmlFor="push_email" className="ml-3 block text-sm font-medium text-gray-700">
-                    Same as email
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="push_nothing"
-                    name="push_notifications"
-                    type="radio"
-                    className={`focus:ring-${color}-500 h-4 w-4 text-${color}-600 border-gray-300`}
-                  />
-                  <label htmlFor="push_nothing" className="ml-3 block text-sm font-medium text-gray-700">
-                    No push notifications
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+            <RadioGroup />
           </div>
         </div>
       </div>

@@ -15,4 +15,12 @@ export const atoms = [
     label: 'Slider',
     value: 'slider',
   },
+  {
+    label: 'Textarea',
+    value: 'textarea',
+  },
+  {
+    label: 'Radio',
+    value: 'radio',
+  },
 ]
