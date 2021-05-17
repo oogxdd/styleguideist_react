@@ -23,4 +23,16 @@ export const atoms = [
     label: 'Radio',
     value: 'radio',
   },
+  {
+    label: 'Select',
+    value: 'select',
+  },
+  {
+    label: 'Video',
+    value: 'video',
+  },
+  {
+    label: 'Logo',
+    value: 'logo',
+  },
 ]

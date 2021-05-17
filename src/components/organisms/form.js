@@ -5,6 +5,7 @@ import { RadioGroup } from '../molecules/radio-group.js'
 import { Button } from '../atoms/button.js'
 import { Input } from '../atoms/input.js'
 import {Textarea} from '../atoms/textarea.js'
+import {Select} from '../atoms/select.js'
 
 export const Form = () => {
   const { color, spacing, radius, style } = useContext(AppContext)
@@ -127,23 +128,7 @@ export const Form = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-3">
-              <label htmlFor="country" className="block text-sm font-medium text-gray-700">
-                Country / Region
-              </label>
-              <div className="mt-1">
-                <select
-                  id="country"
-                  name="country"
-                  autoComplete="country"
-                  className={`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-${radius}`}
-                >
-                  <option>United States</option>
-                  <option>Canada</option>
-                  <option>Mexico</option>
-                </select>
-              </div>
-            </div>
+            <Select />
 
             <div className="sm:col-span-6">
               <label htmlFor="street_address" className="block text-sm font-medium text-gray-700">

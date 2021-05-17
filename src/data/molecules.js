@@ -11,4 +11,8 @@ export const molecules = [
     label: 'Radio group',
     value: 'radio-group',
   },
+  {
+    label: 'Feature',
+    value: 'feature',
+  },
 ]
