@@ -3,15 +3,15 @@ import { AppContext } from 'context'
 
 const fonts = [
   {
-    label: 'Inter',
+    label: 'Inter & ',
     value: 'inter',
   },
   {
-    label: 'Open Sans',
+    label: 'Open Sans & ',
     value: 'open-sans',
   },
   {
-    label: 'Noto Sans JP',
+    label: 'Noto Sans JP & ',
     value: 'noto-sans-jp',
   },
 ]
@@ -21,7 +21,7 @@ const Font = () => {
 
   return (
     <div className="flex flex-col py-4 border-b">
-      Font
+      Font pair
       {fonts.map((font) => (
         <div key={font.value} onClick={() => setFont(font.value)}>
           <input
