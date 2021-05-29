@@ -8,8 +8,10 @@ const spacingToFont = {
   '3': '2xl',
 }
 
-export const Button = () => {
+export const Button = (props) => {
   const { color, spacing, radius, style } = useContext(AppContext)
+
+  const name = props.name || "Start"
 
   if (style === 'big-sur') {
     return <button>Button (Big Sur)</button>
@@ -40,7 +42,7 @@ export const Button = () => {
       md:px-${spacing * 5}
       `}
     >
-      Get started
+      {name}
     </button>
   )
 }

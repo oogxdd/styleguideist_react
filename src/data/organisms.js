@@ -7,4 +7,8 @@ export const organisms = [
     label: 'Feed',
     value: 'feed',
   },
+  {
+    label: 'Form',
+    value: 'form',
+  },
 ]
